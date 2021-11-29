@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+@font-face {
+    font-family: "mm";
+    font-weight: normal;
+    src: url(../fonts/Pyidaungsu-2.5.3_Regular.ttf);
+}
+
+:root {
+    --primary: #22D1EE;
+    --softPrimary: #22cfee8e;
+    --secondary: #707070;
+    --secondary-soft: #f2f2f2;
+    --light: #fff;
+    --dark: #000;
+    --br: 5px;
+}
+
+.mm {
+    font-family: mm;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    color: var(--secondary);
+}
+
+
+/* =============================== Reuse things ======================================== */
+
+.divider {
+    background-color: var(--secondary);
+    height: 2px;
+    margin-top: 10px;
+    border-radius: var(--br);
+}
+
+.body {
+    transition: 0.5s;
+}
+
+
+/* =============================== Reuse things ======================================== */
+
+
+/* =============================== Output section ======================================== */
+
+.app {
+    width: 700px;
+    margin: 100px auto;
+}
+
+.output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.brand {
+    font-size: 30px;
+}
+
+.result-container {
+    display: flex;
+    align-items: center;
+}
+
+.result {
+    font-size: 30px;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+@-moz-document url-prefix() {
+    .ui-select {
+        border: 1px solid #CCC;
+        border-radius: 4px;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
+    }
+    .ui-select select {
+        width: 110%;
+        background-position: right 30px center !important;
+        border: none !important;
+    }
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+}
+
+
+/* =============================== Reuse things ======================================== */
+
+
+/* =============================== Input section ======================================== */
+
+.calculator {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.container {
+    width: 150px;
+}
+
+.input,
+.form,
+.to {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: var(--br);
+    border: 1px solid var(--secondary);
+}
+
+.input {
+    text-align: right;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.cal-btn {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--br);
+    border: 1px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--light);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.cal-btn:active {
+    background-color: var(--softPrimary);
+}
+
+
+/* table css */
+
+.history td,
+.history th {
+    padding: 8px;
+    border-radius: var(--br);
+}
+
+.history tr {
+    background-color: var(--secondary-soft);
+}
+
+
+/*.history tr:nth-child(even){background-color: var(--secondary-soft); }*/
+
+.history {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    /*border-collapse: collapse;*/
+    width: 100%;
+    margin-top: 20px;
+}
+
+.history tr:hover {
+    background-color: #ddd;
+}
+
+.history th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.history th:last-child {
+    text-align: right;
+}
+
+.history tr td:last-child {
+    text-align: right;
+}
+
+#rowSpacer {
+    text-align: center;
+}
+
+
+/* mode change */
+
+.modeChange {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--dark);
+    position: fixed;
+    right: 50px;
+    border: 0;
+    bottom: 50px;
+}
+
+.fa-moon {
+    color: var(--light);
+}
+
+
+/* responsive layout */
+
+@media screen and (max-width:480px) {
+    .app {
+        width: 96%;
+        margin: 30px auto;
+    }
+    .output {
+        flex-flow: column;
+        align-items: flex-end;
+    }
+    .brand-container {
+        width: 100%;
+    }
+    .calculator {
+        flex-wrap: wrap;
+    }
+    .container {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .from-container {
+        width: 46%;
+    }
+    .To-container {
+        width: 46%;
+    }
+    .cal-btn {
+        padding: 15px 0;
+    }
+    .input,
+    .form,
+    .to {
+        padding: 13px 10px;
+        font-size: 20px
+    }
+}
